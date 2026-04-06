@@ -17,3 +17,5 @@ def scan_folder_subfolder(folder_path):
     return files_paths
 
 
+def file_counter(folder_path):
+    return len(scan_folder_subfolder(folder_path))

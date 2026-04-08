@@ -52,19 +52,19 @@ def file_count_by_size(folder_path):
 
     return counter
 
-def deplicate_files(folder_path):
+def duplicate_files(folder_path):
     counter = file_count_by_size(folder_path)
-    deplicate = {}
+    duplicate = {}
 
     if not counter:
-        return deplicate
+        return duplicate
 
     for size, file_count in counter.items():
 
         if file_count > 1:
-            deplicate[size] = file_count
+            duplicate[size] = file_count
 
-    return deplicate
+    return duplicate
 
 def count_by_extension(folder_path):
     files_path = scan_folder_subfolder(folder_path)
@@ -115,9 +115,7 @@ def last_modification_by_day(folder_path):
         modified = datetime.fromtimestamp(m_time)  # transform it into readable date
         days_ago = (now - modified).days
 
-        days[os.path.basename(file)] = f"{days_ago} days ago"
+        days[os.path.basename(file)] = days_ago
 
     return days
-
-
 

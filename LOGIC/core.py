@@ -94,9 +94,9 @@ def count_by_extension(folder_path):
             if extension in extensions:
 
                 if extension not in extension_counter:
-                    extension_counter[extension] = 1
+                    extension_counter[extension] = {"count" :1 , "types" : types}
                 else :
-                    extension_counter[extension] += 1
+                    extension_counter[extension]["count"] += 1
 
     return extension_counter
 
